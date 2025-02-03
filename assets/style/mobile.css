@@ -16,22 +16,23 @@ body {
     align-items: center;
 }
 
-.container {
+article.container {
     background-color: var(--white);
     border: 1px solid var(--gray-dark);
     border-radius: 20px;
     padding: 24px;
-    width: 327px;
+    max-width: 327px;
+    width: 90%;
     box-shadow: #000000 7px 7px;
 }
 
-.card__image img{
+.card__image img {
     border-radius: 10px;
     margin-bottom: 24px;
-    width: 279px;
+    width: 100%;
 }
 
-.header__card {
+header.header__card {
     margin-bottom: 12px;
     display: flex;
     flex-direction: column;
@@ -40,7 +41,7 @@ body {
     color: var(--gray-dark);
 }
 
-.header__card .user__process {
+header.header__card .user__process {
     background-color: var(--yellow);
     width: 73px;
     border-radius: 4px;
@@ -49,11 +50,11 @@ body {
     margin-bottom: 12px;
 }
 
-.text__card {
+section.text__card {
     margin-bottom: 24px;
 }
 
-.text__card .text__title a{
+section.text__card .text__title a {
     text-decoration: none;
     font-size: 1.25em;
     font-weight: bolder;
@@ -62,38 +63,60 @@ body {
     cursor: pointer;
 }
 
-.text__card .text__title a:hover {
+section.text__card .text__title a:hover {
     color: var(--yellow);
+    letter-spacing: 0.3px;
 }
 
-.text__card .text__paragraph {
+section.text__card .text__paragraph {
     margin-top: 12px;
     font-size: 0.87em;
     font-weight: 500;
     color: var(--gray-light);
 }
 
-.user__profile {
+footer.user__profile {
     display: flex;
     align-items: center;
     font-weight: bold;
     font-size: 1em;
 }
 
-.user__profile .user__picture img {
+footer.user__profile .user__picture img {
     width: 32px;
     margin-right: 5.5px;
 }
 
-.user__profile .user__name a {
+footer.user__profile .user__name a {
     text-decoration: none;
     color: var(--gray-dark);
+    cursor: pointer;
+    transition: .2s;
+}
+
+footer.user__profile .user__name a:hover {
+    text-decoration: underline;
+    letter-spacing: 0.15px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 10px; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
     cursor: pointer;
 }
 
 @media (min-width: 1024px) {
-    .container {
-        width: 384px;
+    article.container {
+        width: 20%;
+        max-width: 400px;
     }
-
 }
